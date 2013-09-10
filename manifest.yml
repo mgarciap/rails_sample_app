@@ -3,13 +3,13 @@ applications:
 - name: rails-sample
   memory: 256M
   instances: 1
-  host: rails-sample-${random-word}
-  domain: cfapps.io
+  host: rails-sample
+  domain: paas.nephoscale.com
   path: .
-  command: bundle exec rake db:migrate && bundle exec rails s -p $PORT
   services:
-    rails-postgres:
-      label: elephantsql
-      provider: elephantsql
-      version: n/a
-      plan: turtle
+    rails-sample-db:
+      label: mysql
+      provider: core
+      version: '5.5'
+      plan: free
+  command: bundle exec rake db:migrate && bundle exec rails s -p $PORT

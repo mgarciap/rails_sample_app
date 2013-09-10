@@ -24,6 +24,8 @@ GEM
       activesupport (= 3.0.12)
       arel (~> 2.0.10)
       tzinfo (~> 0.3.23)
+    activerecord-mysql2-adapter (0.0.3)
+      mysql2
     activeresource (3.0.12)
       activemodel (= 3.0.12)
       activesupport (= 3.0.12)
@@ -51,8 +53,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.18)
+    mysql2 (0.3.13)
     nokogiri (1.4.4)
-    pg (0.15.1)
     polyglot (0.3.3)
     rack (1.2.5)
     rack-mount (0.6.14)
@@ -106,12 +108,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-mysql2-adapter
   annotate (= 2.4.0)
   cf-autoconfig (~> 0.2.1)
   factory_girl_rails (= 1.0)
   faker (= 0.3.1)
   gravatar_image_tag (= 1.0.0.pre2)
-  pg (~> 0.15.1)
+  mysql2
   rails (= 3.0.12)
   rspec-rails (= 2.6.1)
   spork (= 0.9.0.rc8)
